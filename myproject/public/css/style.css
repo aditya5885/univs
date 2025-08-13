@@ -117,7 +117,10 @@ button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=
 body{--wp-dark-mode-scale: 1}
 html[xmlns] .clearfix {display: block;}
 * html .clearfix {height: 1%;}
-body{margin:0;padding:0;width:100%;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff;font-family:'Open Sans',sans-serif}
+body{margin:0;padding:0;width:100%;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff;font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;}
 .container{max-width:1170px;width:100%;margin:0 auto}
 .container-fluid{width:100%;padding:0 20px}
 .row{display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}
@@ -161,8 +164,6 @@ body{margin:0;padding:0;width:100%;font-size:1rem;font-weight:400;line-height:1.
 header ul li{list-style-type: none;}
 header ul{margin-left: 0;}
 ul, ol{margin-left: 20px;margin-top: 0;}
-ul li{list-style-type:disc}
-ol li{list-style-type:decimal}
 .no-list li{list-style-type: none !important;position: relative;}
 .table-responsive{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}
 table{width:100%;max-width:100%;margin-bottom:1rem;background-color:transparent;border-collapse:collapse}
@@ -217,23 +218,25 @@ img.lazy {opacity: 0;-webkit-transition: opacity .5s ease-in;-o-transition: opac
 .dummy{padding: 0 !important;border:0 !important;margin: 0 !important;box-shadow: none !important;width: 0 !important;height: 0 !important;}
 .text-second-line{word-spacing: 9999999px;}
 /*************************************************************************************************
-													Header
+												Header
 ***************************************************************************************************/
 .headerImg img{
     width: 80px;
     object-fit: cover;
 }
-.studentPortal h3:last-child {
+.studentPortal h4 {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+.studentPortal h3:last-child,#mobileMenu .studentPortal h4:last-child {
     font-size: 15px;
-    color: #8f8f8f;
+    color: #000;
     font-weight: 300;
+    line-height: 15px;
 }
 .header{
     padding: 15px 0;
     border-bottom: 1px solid #e5e7eb;
-    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .profile{
     background-color: hsl(216, 12%, 84%);
@@ -247,8 +250,293 @@ img.lazy {opacity: 0;-webkit-transition: opacity .5s ease-in;-o-transition: opac
     font-size: 12px;
     font-weight: 600;
 }
+.profileImg {
+    background-color: hsl(222, 82%, 53%);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 6px;
+    border-radius: 10px;
+}
+.NavLeft h3 {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 20px 20px;
+    border-bottom: 1px solid #cecece;
+}
+.NavLeft{
+    border-bottom: 1px solid #cecece;
+    border-right: 1px solid #cecece;
+     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.NavLeft li{
+    font-size: 15px;
+    font-weight: 600;
+}
+.NavLeft li a {
+    color: #645356;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+.NavLeft li a.active,
+.NavLeft li a:hover  {
+    background-color: #eff6ff;
+    border-color: #9cbad9;
+    color: #007bff;
+}
+.NavLeft li a.active svg {
+    stroke: #007bff;
+}
+.navMenu{
+    padding: 0 10px;
+}
+.WelcomeTab{
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,105,148,1) 15.6%, rgba(0,163,217,1) 51.9%, rgba(0,194,226,1) 81% );
+padding: 30px;
+    color: #fff;
+}
+.WelcomeTab p{
+    font-size: 15px;
+}
+.dashBIcon{
+    background-color: #3b82f6;
+    padding: 10px;
+    width: 45px;
+    border-radius: 8px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboardContent{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.DashBMainTab .row-four{
+    max-width: calc(25% - 10px);
+}
+.dashboardContent span{
+    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
+}
+.dashIcon h3{
+    font-size: 25px;
+    line-height: 26px;
+}
+.DashBMainTab{
+    padding: 0 15px;
+}
+.DashBMainTab .row-four:nth-child(2) .dashboardContent .dashBIcon{
+    background-color: #f97316;
+}
+.DashBMainTab .row-four:nth-child(3) .dashboardContent .dashBIcon{
+    background-color: #22c55e;
+}
+.DashBMainTab .row-four:nth-child(4) .dashboardContent .dashBIcon{
+    background-color: #a855f7;
+}
+.comIcon{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b82f6;
+    padding: 6px;
+    border-radius: 50%;
+}
+.dashBoardTitle h3{
+    line-height: 15px;
+}
+.statusApp {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    background-color: #ffe7c8;
+    color: #b45309;
+}
+.statusApp.pending {
+    background-color: #ffe7c8;
+    color: #b45309;
+}
+.statusApp.progress {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+.statusApp.completed {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+.statusApp svg {
+    stroke: currentColor;
+}
+.applicationQ h3{
+    font-size: 15px;
+    font-weight: 700;
+}
+.eachApplicant{
+    padding: 20px 15px;
+    border: 1px solid #cecece;
+    margin: 6px;
+    border-radius: 10px;
+}
+.applicationQ h3 {
+    font-size: 15px;
+    font-weight: 700;
+}
 
+.eachApplicant {
+    padding: 20px 15px;
+    border: 1px solid #cecece;
+    margin: 6px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.eachApplicant svg {
+    stroke: currentColor;
+}
+.eachApplicant.active[data-color="orange"],.eachApplicant[data-color="orange"]:hover {
+    border-color: #ea580c;
+    background-color: #fff4ec;
+    color: #ea580c;
+}
+.eachApplicant.active[data-color="green"],.eachApplicant[data-color="green"]:hover {
+    border-color: #15803d;
+    background-color: #eafff3;
+    color: #15803d;
+}
+.eachApplicant.active[data-color="blue"],.eachApplicant[data-color="blue"]:hover {
+    border-color: #1d4ed8;
+    background-color: #eef4ff;
+    color: #1d4ed8;
+}
+.eachApplicant.active[data-color="purple"],.eachApplicant[data-color="purple"]:hover {
+    border-color: #6b21a8;
+    background-color: #f7ecff;
+    color: #6b21a8;
+}
+.CourseContent h3 {
+    font-size: 15px;
+    color: #574949;
+    font-weight: 400;
+}
+.comBtn {
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 35px;
+    font-weight: 600;
+    display: inline-flex;
+    font-size: 12px;
+    border: 1px solid #3b82f6;
+}
+.comBtn:hover{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #3b82f6;
+}
+.recentActivity h3,.docTitle h3{
+    font-size: 17px;
+}
+.CourseContent h3,.applicationQ h3,.dashBoardTitle h3{
+    font-size: 14px;
+}
+.DashBMainTab .row-three{
+    max-width: calc(33% - 8px);
+}
+.dashboardContent {
+    padding: 20px;
+    border-radius: 14px;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
 
+.dashboardContent:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Blue - 1st card */
+.row-four:nth-child(1) .dashboardContent:hover,
+.row-four:nth-child(1) .dashboardContent.active {
+    background-color: #eef4ff;
+    border-color: #1d4ed8;
+}
+.row-four:nth-child(1) .dashboardContent:hover svg,
+.row-four:nth-child(1) .dashboardContent.active svg {
+    stroke: #1d4ed8;
+}
+.row-four:nth-child(1) .dashboardContent:hover h3,
+.row-four:nth-child(1) .dashboardContent:hover span,
+.row-four:nth-child(1) .dashboardContent.active h3,
+.row-four:nth-child(1) .dashboardContent.active span {
+    color: #1d4ed8;
+}
+
+/* Orange - 2nd card */
+.row-four:nth-child(2) .dashboardContent:hover,
+.row-four:nth-child(2) .dashboardContent.active {
+    background-color: #fff4ec;
+    border-color: #ea580c;
+}
+.row-four:nth-child(2) .dashboardContent:hover svg,
+.row-four:nth-child(2) .dashboardContent.active svg {
+    stroke: #ea580c;
+}
+.row-four:nth-child(2) .dashboardContent:hover h3,
+.row-four:nth-child(2) .dashboardContent:hover span,
+.row-four:nth-child(2) .dashboardContent.active h3,
+.row-four:nth-child(2) .dashboardContent.active span {
+    color: #ea580c;
+}
+
+/* Green - 3rd card */
+.row-four:nth-child(3) .dashboardContent:hover,
+.row-four:nth-child(3) .dashboardContent.active {
+    background-color: #eafff3;
+    border-color: #15803d;
+}
+.row-four:nth-child(3) .dashboardContent:hover svg,
+.row-four:nth-child(3) .dashboardContent.active svg {
+    stroke: #15803d;
+}
+.row-four:nth-child(3) .dashboardContent:hover h3,
+.row-four:nth-child(3) .dashboardContent:hover span,
+.row-four:nth-child(3) .dashboardContent.active h3,
+.row-four:nth-child(3) .dashboardContent.active span {
+    color: #15803d;
+}
+.row-four:nth-child(4) .dashboardContent:hover,
+.row-four:nth-child(4) .dashboardContent.active {
+    background-color: #f7ecff;
+    border-color: #6b21a8;
+}
+.row-four:nth-child(4) .dashboardContent:hover svg,
+.row-four:nth-child(4) .dashboardContent.active svg {
+    stroke: #6b21a8;
+}
+.row-four:nth-child(4) .dashboardContent:hover h3,
+.row-four:nth-child(4) .dashboardContent:hover span,
+.row-four:nth-child(4) .dashboardContent.active h3,
+.row-four:nth-child(4) .dashboardContent.active span {
+    color: #6b21a8;
+}
 
 /*************************************************************************************************
 													Slick Slider
@@ -359,23 +647,65 @@ img.lazy {opacity: 0;-webkit-transition: opacity .5s ease-in;-o-transition: opac
 input[type="text"], input[type="email"], input[type="number"], input[type="password"], textarea, select{background: #f9f9f9; border: 1px solid #e1e1e1; color: #666666; font-size: 15px; font-weight: 300; margin: 0; padding: 10px; width:100%;} 
 input[type="submit"]{  background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: 1px solid #3078C0; cursor: pointer; display: inline-block; font-size: 15px; font-weight: 300; margin-bottom: 0; padding: 8px 25px; transition: all 0.3s linear 0s; -webkit-transition: all 0.3s linear 0s; -moz-transition: all 0.3s linear 0s; -o-transition: all 0.3s linear 0s; width: auto; border-radius: 0; color: #3078C0; margin: 10px 0; -webkit-box-shadow: none; box-shadow: none;} 
 input[type="submit"]:hover{background-color:#3078C0;color:#fff;}
+
+
+
+@media (width: 768px) {
+    .hamBurger {
+        display: flex;    
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        margin-right: 20px;
+    }
+}
+.hamBurger{
+    display: none;
+}
 /*************************************************************************************************
 													RESPONSIVE
 ***************************************************************************************************/
 @media only screen and ( max-width: 1024px ){
 
 }
-@media only screen and (max-width: 820px), only screen and (max-device-width: 1024px) and (min-device-width: 768px), only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: portrait){
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 770px){
+.hamBurger{
+    display: block;
+}
+.welcomE,.row-five,.studentPortal{
+    display: none;
+}
+.container,.container-fluid{
+    padding: 0 20px;
+}
+.row-e, .row-eighty, .row-five, .row-four, .row-fourty, .row-half, .row-ninety, .row-seventy, .row-sixty, .row-ten, .row-thirty, .row-three {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.DashBMainTab .row-four,.DashBMainTab .row-three {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.comIcon {
+    margin-bottom: 10px;
+}
+.recentDashboard{
+    margin-bottom: 15px;
+}
+.row-half.pr-15{
+    padding-right: unset;
+    margin-bottom: 20px;
+}
+.newAction.dashboardContent{
+    padding: 20px 15px;
+}
+.activityEnd .row{
+    display: block;
+}
 
 }
 @media only screen and (max-width: 920px){
@@ -396,23 +726,75 @@ input[type="submit"]:hover{background-color:#3078C0;color:#fff;}
 
 
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Your tablet-specific styles here */
+    
+}
 
 
 
 
 
 
+/* Hamburger button */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  z-index: 1100;
+}
 
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
 
+/* Hamburger active animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+#mobileMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1050;
+    padding: 30px 20px;
+}
+#mobileMenu.show { right: 0; }
 
-
-
-
-
-
-
-
-
+/* Backdrop overlay */
+#menuBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1040;
+}
+#menuBackdrop.show {
+  opacity: 1;
+  pointer-events: all;
+}
 
 
 
