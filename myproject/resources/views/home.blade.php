@@ -16,7 +16,7 @@
 <script src="/js/app.js?v=20250811"></script>
 </head>
 <body>
-  <div class="alert bg-primary alert-success m-0 rounded-0 alertP" role="alert">
+  <div class="alert headerTop alert-success m-0 rounded-0 alertP" role="alert">
   <div class="container d-flex flex-wrap justify-content-between align-items-center">
 
     <!-- Toggler button visible only on mobile -->
@@ -45,7 +45,27 @@
   </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-  <div class="container">
+  <div class="container-fluid d-lg-none">
+    <!-- Logo -->
+    <a class="navbar-brand univImg" href="https://univs.in/app/">
+      <img src="{{ asset('image/univs.webp') }}" alt="Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://portal.univs.com/shop">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+      </ul>
+        <div class="d-flex gap-3 flex-wrap mb-2 mb-md-0 d-lg-none">
+        <a href="https://portal.univs.com/login" class="btn btn-sm btn-light">Student Login</a>
+        <a href="https://portal.univs.com/agent-login" class="btn btn-sm btn-outline-dark">Agent Login</a>
+      </div>
+    </div>
+  </div>
+  <div class="container d-none d-lg-flex">
     <!-- Logo -->
     <a class="navbar-brand univImg" href="https://univs.in/app/">
       <img src="{{ asset('image/univs.webp') }}" alt="Logo" />
@@ -68,8 +88,7 @@
 </nav>
 <section class="firstSection overflow-hidden py-3">
   <div class="container px-4 my-5 text-center">
-    <img class="d-block mx-auto mb-2 img-fluid" src="{{ asset('image/study-abroad1.png') }}" alt="study-abroad1" width="72" />
-    <h1 class="display-5 fw-bold text-body-emphasis mb-4">Univs Application Portal</h1>
+    <h1 class="display-5 fw-bold text-body-emphasis mb-3">Univs Application Portal</h1>
     <div class="col-12 col-md-8 col-lg-6 mx-auto">
       <p class="mb-4">Univs.com — the official portal to effortlessly track your university application, get real-time updates, and access post-admission support. It's easy, fast, and completely transparent, designed with students in mind.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center flex-wrap">
@@ -124,7 +143,7 @@
 <section class="thirdSection overflow-hidden py-5 bg-lite">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="fw-bold">Offering The Best In Education To The World</h2>
+      <h3 class="fw-bold">Offering The Best In Education To The World</h3>
     </div>
     <div class="row g-4">
       <div class="col-12 col-md-6 col-lg-3">
@@ -169,7 +188,7 @@
 <section class="fourthSection overflow-hidden py-5 bg-light">
   <div class="container">
     <div class="text-center mb-4">
-      <h2 class="fw-bold">Top Universities</h2>
+      <h3 class="fw-bold">Top Universities</h3>
       <p class="text-muted">Our partner universities offering world-class education in Georgia</p>
     </div>
     <div class="univ-carousel">
@@ -197,7 +216,7 @@
     <!-- Section 1 -->
     <div class="row align-items-center fifthSec gy-4">
       <div class="col-12 col-md-6">
-        <h2 class="fw-bold mb-3">Why Choose Univs.com</h2>
+        <h3 class="fw-bold mb-3">Why Choose Univs.com</h3>
         <p>Univs.com is your one-stop platform for University Admissions. We offer expert guidance, exclusive partnerships with top universities, and a seamless application experience—completely free for students!</p>
       </div>
       <div class="col-12 col-md-6">
@@ -208,7 +227,7 @@
     </div>
     <div class="row align-items-center mb-5 gy-4">
       <div class="col-12 col-md-6 order-md-2">
-        <h2 class="fw-bold mb-4">Benefits of Choosing Univs.com</h2>
+        <h3 class="fw-bold mb-4">Benefits of Choosing Univs.com</h3>
         <p>The Portal of Univs.com Offers an Easy Login, One-Click Registration, Real-Time Application Tracking, Personalized Dashboards for Students and Agents, Secure Access, Direct Communication for Support, and Seamless Navigation to the Main Site.</p>
       </div>
       <div class="col-12 col-md-6 order-md-1">
@@ -219,7 +238,7 @@
     </div>
   </div>
 </section>
-<section class="sixthSection overflow-hidden py-3">
+<section class="sixthSection overflow-hidden py-lg-3">
   <div class="container">
     <div class="row text-center univCard">
       <div class="col-md-4">
@@ -261,14 +280,14 @@
 <section class="contactus-section overflow-hidden py-0">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0">
+      <div class="col-md-6 mb-lg-4 mb-md-0">
         <img src="https://portal.univs.com/assets/landing-pages/assets-one/images/contactus.jpg" alt="Contact Us" class="img-fluid w-100">
       </div>
       <div class="col-md-6 ctf">
         <form class="contact-form" action="https://portal.univs.com/web-to-lead-tracking" method="POST">
           <input type="hidden" name="wl_staff" value="1">
           <input type="hidden" name="wl_staff_branch" value="1">
-          <h4 class="fw-bold mb-2">Book Free Counseling</h4>
+          <h4 class="fw-bold mb-1">Book Free Counseling</h4>
           <p class="mb-4">Share your details to get a callback from our team.</p>
           <div class="mb-3">
             <input type="text" id="wl_first_name" name="wl_first_name" class="form-control" placeholder="Name*" required>
@@ -332,7 +351,7 @@
       </div>
     </div>
     <div class="d-flex flex-column flex-sm-row justify-content-between pt-1 mt-4 border-top">
-      <p class="mb-0 text-muted">©2025, Univs Portal. All rights reserved.</p>
+      <p class="my-1 text-muted">©2025, Univs Portal. All rights reserved.</p>
       <ul class="list-unstyled d-flex">
         <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-instagram"></i></a></li>
         <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-facebook"></i></a></li>
@@ -352,7 +371,7 @@
     $('.univ-carousel').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  arrows: true,
+  arrows: false,
   dots: true,
   infinite: true,
   autoplay: true,

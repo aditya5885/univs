@@ -183,4 +183,4 @@
 <?php $component = $__componentOriginal74daf2d0a9c625ad90327a6043d15980; ?>
 <?php unset($__componentOriginal74daf2d0a9c625ad90327a6043d15980); ?>
 <?php endif; ?>
-<?php /**PATH /home/u647397843/domains/univs.in/public_html/app/myproject/vendor/laravel/framework/src/Illuminate/Foundation/Providers/../resources/exceptions/renderer/components/context.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\laravel\univs\myproject\vendor\laravel\framework\src\Illuminate\Foundation\Providers/../resources/exceptions/renderer/components/context.blade.php ENDPATH**/ ?>

@@ -46,4 +46,4 @@
         </div>
     </div>
 </header>
-<?php /**PATH C:\Users\istud\Downloads\app\myproject\vendor\laravel\framework\src\Illuminate\Foundation\Providers/../resources/exceptions/renderer/components/navigation.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\laravel\univs\myproject\vendor\laravel\framework\src\Illuminate\Foundation\Providers/../resources/exceptions/renderer/components/navigation.blade.php ENDPATH**/ ?>

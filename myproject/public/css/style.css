@@ -25,7 +25,6 @@ html, body {
 }
 .counter {
     font-size: 30px;
-    line-height: normal;
     font-weight: 700;
 }
 .thirdSection .card{
@@ -53,6 +52,9 @@ html, body {
 .navbar-toggler:active {
     outline: none !important;
     box-shadow: none !important;
+}
+.form-select{
+    background-color: #f9f9f9;
 }
 .text-muted {
     font-size: 15px;
@@ -84,6 +86,7 @@ html, body {
 }
     .ctf form {
     margin-bottom: 30px;
+    padding: 40px 30px;
 }
 .univCard .col-md-4{
     margin-bottom: 20px;
@@ -100,11 +103,6 @@ html, body {
 /* */
 /*
 	Theme Name: Nextline Skelton
-	Theme URI: https://www.nextline.in
-	Description: Html 5 responsive theme
-	Version: 5.1
-	Author: Haris
-	Author URI: https://harisk.me
 */
 /*************************************************************************************************
 													RESET
@@ -161,9 +159,12 @@ body{margin:0;padding:0;width:100%;font-size:1rem;font-weight:400;line-height:1.
 .flex-no-wrap{-ms-flex-wrap:nowrap;-webkit-flex-wrap:nowrap;flex-wrap:nowrap}
 .flex-column {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
 }
+.container.containerX {
+    justify-content: flex-start !important; /* or center, depending on need */
+}
+
 header ul li{list-style-type: none;}
 header ul{margin-left: 0;}
-ul, ol{margin-left: 20px;margin-top: 0;}
 .no-list li{list-style-type: none !important;position: relative;}
 .table-responsive{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}
 table{width:100%;max-width:100%;margin-bottom:1rem;background-color:transparent;border-collapse:collapse}
@@ -220,6 +221,9 @@ img.lazy {opacity: 0;-webkit-transition: opacity .5s ease-in;-o-transition: opac
 /*************************************************************************************************
 												Header
 ***************************************************************************************************/
+.headerTop {
+    background-color: #0d6efd !important; 
+}
 .headerImg img{
     width: 80px;
     object-fit: cover;
@@ -257,12 +261,6 @@ img.lazy {opacity: 0;-webkit-transition: opacity .5s ease-in;-o-transition: opac
     font-weight: 700;
     padding: 6px;
     border-radius: 10px;
-}
-.NavLeft h3 {
-    font-weight: 600;
-    font-size: 16px;
-    padding: 20px 20px;
-    border-bottom: 1px solid #cecece;
 }
 .NavLeft{
     border-bottom: 1px solid #cecece;
@@ -311,27 +309,19 @@ padding: 30px;
     align-items: center;
     justify-content: center;
 }
-.dashboardContent{
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    border: 1px solid #cecece;
-    border-radius: 10px;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-}
 .DashBMainTab .row-four{
     max-width: calc(25% - 10px);
 }
+.DashBMainTab .row-half{
+    max-width: calc(50% - 10px);
+}
 .dashboardContent span{
-    font-weight: 600;
+    font-weight: 700 !important;
     font-size: 12px;
-    font-weight: 500;
 }
 .dashIcon h3{
     font-size: 25px;
     line-height: 26px;
-}
-.DashBMainTab{
-    padding: 0 15px;
 }
 .DashBMainTab .row-four:nth-child(2) .dashboardContent .dashBIcon{
     background-color: #f97316;
@@ -352,9 +342,6 @@ padding: 30px;
     background-color: #3b82f6;
     padding: 6px;
     border-radius: 50%;
-}
-.dashBoardTitle h3{
-    line-height: 15px;
 }
 .statusApp {
     display: inline-flex;
@@ -386,25 +373,18 @@ padding: 30px;
     font-size: 15px;
     font-weight: 700;
 }
-.eachApplicant{
-    padding: 20px 15px;
-    border: 1px solid #cecece;
-    margin: 6px;
-    border-radius: 10px;
-}
 .applicationQ h3 {
     font-size: 15px;
     font-weight: 700;
 }
-
 .eachApplicant {
     padding: 20px 15px;
     border: 1px solid #cecece;
-    margin: 6px;
     border-radius: 10px;
     background-color: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    height: 100%;
 }
 .eachApplicant svg {
     stroke: currentColor;
@@ -449,14 +429,31 @@ padding: 30px;
     color: #000;
     border: 1px solid #3b82f6;
 }
-.recentActivity h3,.docTitle h3{
-    font-size: 17px;
+.recentActivity h3, .docTitle .quick {
+    text-align: center;
+    color: #1a3d7c;
+}
+.recenT{
+    color: #1a3d7c;
+}
+.serviceT {
+    color: #f94343;
+    font-weight: 700;
 }
 .CourseContent h3,.applicationQ h3,.dashBoardTitle h3{
     font-size: 14px;
 }
+.activityEnd{
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 10px;
+}
+.dashboardContent .recentDashboard:last-child .activityEnd{
+    border-bottom: unset;
+    padding-bottom: unset;
+}
 .DashBMainTab .row-three{
     max-width: calc(33% - 8px);
+    margin-bottom: 20px;
 }
 .dashboardContent {
     padding: 20px;
@@ -464,15 +461,12 @@ padding: 30px;
     background-color: #fff;
     border: 1px solid #e5e7eb;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
-
 .dashboardContent:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
-
-/* Blue - 1st card */
 .row-four:nth-child(1) .dashboardContent:hover,
 .row-four:nth-child(1) .dashboardContent.active {
     background-color: #eef4ff;
@@ -488,8 +482,6 @@ padding: 30px;
 .row-four:nth-child(1) .dashboardContent.active span {
     color: #1d4ed8;
 }
-
-/* Orange - 2nd card */
 .row-four:nth-child(2) .dashboardContent:hover,
 .row-four:nth-child(2) .dashboardContent.active {
     background-color: #fff4ec;
@@ -537,7 +529,35 @@ padding: 30px;
 .row-four:nth-child(4) .dashboardContent.active span {
     color: #6b21a8;
 }
-
+.applicationQ .row-half{
+    padding: 5px;
+}
+.mobNav h3:last-child{
+    font-size: 16px;
+    font-weight: 500;
+}
+.recentDashboardWrapper {
+    max-height: 200px; /* adjust height as needed */
+    overflow-y: auto;
+}
+.recentDashboardWrapper::-webkit-scrollbar {
+    width: 4px;
+}
+.recentDashboardWrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+.recentDashboardWrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+.recentDashboardWrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.navStd{
+    padding: 15px;
+    border-bottom: 1px solid #cecece;
+}
 /*************************************************************************************************
 													Slick Slider
 ***************************************************************************************************
@@ -669,7 +689,31 @@ input[type="submit"]:hover{background-color:#3078C0;color:#fff;}
 @media only screen and ( max-width: 1024px ){
 
 }
+@media (max-width: 991.98px) { /* Bootstrap's lg breakpoint */
+  .navbar > .container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+.contact-form p {
+    font-size: 14px;
+}
 @media (max-width: 770px){
+    .DashBMainTab .row-half {
+        max-width: 100%;
+    }
+    .additionalServices{
+        margin-top: 20px;
+    }
+     .recenT{
+        text-align: center;
+    }
+    .DashBMainTab .row-four{
+        padding: 5px;
+    }
+    .WelcomeTab{
+        padding: 20px;
+    }
 .hamBurger{
     display: block;
 }
@@ -679,14 +723,21 @@ input[type="submit"]:hover{background-color:#3078C0;color:#fff;}
 .container,.container-fluid{
     padding: 0 20px;
 }
-.row-e, .row-eighty, .row-five, .row-four, .row-fourty, .row-half, .row-ninety, .row-seventy, .row-sixty, .row-ten, .row-thirty, .row-three {
+.DashBMainTab .row-four,.applicationQ .row-half{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.row-e, .row-eighty, .row-five, .row-fourty, .row-half, .row-ninety, .row-seventy, .row-sixty, .row-ten, .row-thirty, .row-three {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     -webkit-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
 }
-.DashBMainTab .row-four,.DashBMainTab .row-three {
+.DashBMainTab .row-three {
     max-width: 100%;
     margin-bottom: 15px;
 }
@@ -796,6 +847,121 @@ input[type="submit"]:hover{background-color:#3078C0;color:#fff;}
   pointer-events: all;
 }
 
+.supportTickets {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.support-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.support-header h3 {
+    font-weight: 700;
+    color: #1a3d7c;
+}
+
+.btn-create {
+    background-color: #2563eb;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn-create:hover {
+    background: #1e4db7;
+}
+
+.support-body {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 240px;
+    padding: 10px 20px;
+}
+
+.support-body::-webkit-scrollbar {
+    width: 6px;
+}
+.support-body::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+}
+
+.ticket-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+.ticket-item:last-child {
+    border-bottom: none;
+}
+
+.ticket-status {
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.ticket-status.open {
+    background: #dcfce7;
+    color: #166534;
+}
+.ticket-status.closed {
+    background: #fee2e2;
+    color: #991b1b;
+}
+.support-footer {
+    padding: 10px 20px;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+}
+.btn-view-all {
+    font-size: 14px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+.btn-view-all:hover {
+    text-decoration: underline;
+}
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-status {
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.processing {
+    background: #fff7ed;
+    color: #b45309;
+}
+.completed {
+    background: #dcfce7;
+    color: #166534;
+}
 
 
 

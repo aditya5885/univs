@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Univs</title>
-  <link rel="stylesheet" href="{{ asset('style.css') }}?v=2">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('image/favi.webp') }}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('image/favi.webp') }}" />
-    <link rel="shortcut icon" href="{{ asset('image/favi.webp') }}" />
+  <link rel="stylesheet" href="<?php echo e(asset('style.css')); ?>?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo e(asset('image/favi.webp')); ?>" />
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('image/favi.webp')); ?>" />
+    <link rel="shortcut icon" href="<?php echo e(asset('image/favi.webp')); ?>" />
     <link rel="stylesheet" href="/css/style.css">
 <script src="/js/app.js?v=20250811"></script>
 </head>
@@ -478,4 +478,4 @@ btn.onclick = () => menu.classList.contains('show') ? closeMenu() : openMenu();
 backdrop.onclick = closeMenu;
 menu.querySelectorAll('a').forEach(a => a.onclick = closeMenu);
 </script>
-</html>
+</html><?php /**PATH C:\laravel\univs\myproject\resources\views/second.blade.php ENDPATH**/ ?>
